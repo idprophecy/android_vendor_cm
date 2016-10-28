@@ -149,7 +149,8 @@ endif
 # Build Substratum unless SUBSTRATUM is set to false
 ifneq ($(SUBSTRATUM),false)
     PRODUCT_PACKAGES += \
-        Substratum
+        Substratum \
+	masquerade
 endif
 
 # Exchange support
