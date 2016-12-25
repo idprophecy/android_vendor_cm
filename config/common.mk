@@ -146,6 +146,12 @@ ifneq ($(HAS_ROOT),false)
         MagiskManager
 endif
 
+# Build Substratum unless SUBSTRATUM is set to false
+ifneq ($(SUBSTRATUM),false)
+    PRODUCT_PACKAGES += \
+        Substratum
+endif
+
 # Exchange support
 PRODUCT_PACKAGES += \
     Exchange2
