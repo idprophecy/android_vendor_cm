@@ -81,6 +81,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/cm/config/permissions/com.cyanogenmod.android.xml:system/etc/permissions/com.cyanogenmod.android.xml
 
+# Copy Magisk zip
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/zip/magisk.zip:system/addon.d/magisk.zip
+
 # Include CM audio files
 include vendor/cm/config/cm_audio.mk
 
@@ -132,6 +136,10 @@ PRODUCT_PACKAGES += \
     Trebuchet \
     WallpaperPicker \
     WeatherProvider
+
+# Magisk Manager
+PRODUCT_PACKAGES += \
+    MagiskManager
 
 # Exchange support
 PRODUCT_PACKAGES += \
