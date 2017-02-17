@@ -81,9 +81,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/cm/config/permissions/com.cyanogenmod.android.xml:system/etc/permissions/com.cyanogenmod.android.xml
 
-# Copy Magisk zip
-PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/zip/magisk.zip:system/addon.d/magisk.zip
+# Only build with Magisk if HAS_ROOT is not equal to false
+ifneq ($(HAS_ROOT),false)
+    # Copy Magisk zip
+    PRODUCT_COPY_FILES += \
+        vendor/cm/prebuilt/zip/magisk.zip:system/addon.d/magisk.zip
+endif
 
 # Include CM audio files
 include vendor/cm/config/cm_audio.mk
@@ -136,9 +139,12 @@ PRODUCT_PACKAGES += \
     WallpaperPicker \
     WeatherProvider
 
-# Magisk Manager
-PRODUCT_PACKAGES += \
-    MagiskManager
+# Only build with Magisk if HAS_ROOT is not equal to false
+ifneq ($(HAS_ROOT),false)
+    # Magisk Manager
+    PRODUCT_PACKAGES += \
+        MagiskManager
+endif
 
 # Exchange support
 PRODUCT_PACKAGES += \
