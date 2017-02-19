@@ -146,8 +146,8 @@ ifneq ($(HAS_ROOT),false)
         MagiskManager
 endif
 
-# Build Substratum unless SUBSTRATUM is set to false
-ifneq ($(SUBSTRATUM),false)
+# Build Substratum unless HAS_SUBSTRATUM is set to false
+ifneq ($(HAS_SUBSTRATUM),false)
     PRODUCT_PACKAGES += \
         Substratum \
 	masquerade
