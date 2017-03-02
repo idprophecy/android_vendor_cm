@@ -152,6 +152,10 @@ ifneq ($(HAS_SUBSTRATUM),false)
 	masquerade
 endif
 
+# Round Icons
+PRODUCT_PACKAGES += \
+    NexusLauncherIcons
+
 # Exchange support
 PRODUCT_PACKAGES += \
     Exchange2
