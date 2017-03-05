@@ -145,12 +145,19 @@ ifneq ($(HAS_ROOT),false)
         MagiskManager
 endif
 
-# Build Substratum unless HAS_SUBSTRATUM is set to false
+# Include Substratum and build Masquerade unless HAS_SUBSTRATUM is set to false
 ifneq ($(HAS_SUBSTRATUM),false)
     PRODUCT_PACKAGES += \
         Substratum \
-	masquerade
+	ThemeInterfacer
 endif
+
+# ThemeInterfacer sig check override
+# Default value is false
+# Setting to true so that my debug APKs get recognized without toggling the
+# switch in Advanced Settngs. Plus I don't care about security :P
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.interfacer.buildtype.check=true
 
 # Round Icons
 PRODUCT_PACKAGES += \
