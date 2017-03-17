@@ -129,6 +129,7 @@ PRODUCT_PACKAGES += \
     AudioFX \
     CMSettingsProvider \
     CMUpdater \
+    CustomTiles \
     LineageSetupWizard \
     Eleven \
     ExactCalculator \
