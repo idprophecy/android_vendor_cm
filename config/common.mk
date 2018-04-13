@@ -135,8 +135,7 @@ PRODUCT_PACKAGES += \
     Trebuchet \
     Updater \
     WallpaperPicker \
-    WeatherProvider \
-    LOSCoins
+    WeatherProvider
 
 # Only build with Magisk if HAS_ROOT is not equal to false
 ifneq ($(HAS_ROOT),false)
